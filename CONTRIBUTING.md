@@ -50,10 +50,11 @@ Use the lightest-weight venue that fits the change:
   [issue](https://github.com/smaramwbc/statewave/issues), not a discussion.
 - **Security concerns** — never post publicly. Follow the coordinated
   disclosure process in [SECURITY.md](SECURITY.md).
-- **Licensing questions** — general questions ("which license fits my use
-  case?") are welcome publicly in Discussions. Specific commercial terms,
-  contracts, or enterprise procurement go privately to
-  [licensing@statewave.ai](mailto:licensing@statewave.ai).
+- **Licensing questions** — general questions ("how does Apache-2.0 apply
+  to my use case?") are welcome publicly in Discussions. Enterprise support
+  contracts (SLA, indemnity, procurement) go privately to
+  [licensing@statewave.ai](mailto:licensing@statewave.ai) — these are
+  services agreements, not separate licenses. Apache-2.0 covers the code.
 
 Rule of thumb: if you can describe a clean reproduction or a concrete change,
 open an Issue or PR. Otherwise, start in Discussions.

@@ -44,9 +44,10 @@ getting.
 - Sell merchandise (apparel, stickers, etc.) bearing the Statewave Marks
   without permission.
 
-## Hosting providers and managed services
+## Branded hosting and managed services
 
-This is the most important case for us, so we want to be explicit:
+Trademark protection is independent of the Apache-2.0 license. Two
+situations come up most often:
 
 - You may operate Statewave for your own users (internal use, embedded in
   your product, or as part of any Apache-2.0-compliant deployment) without
