@@ -98,6 +98,17 @@ Plus four more — minimal quickstart, docs-grounded support, eval suite (55 ass
 # Start Postgres (pgvector)
 docker compose up db -d
 
+# Configure — copy the template, then set your LLM provider key.
+# Statewave reads .env automatically (env prefix STATEWAVE_).
+# Without a key the server still boots, but in demo mode: stub
+# hash-based embeddings + the heuristic compiler — no real
+# semantic search. For LLM-backed behaviour, set in .env:
+#   STATEWAVE_EMBEDDING_PROVIDER=litellm
+#   STATEWAVE_LITELLM_API_KEY=sk-...           # any LiteLLM provider
+#   STATEWAVE_LITELLM_MODEL=gpt-4o-mini
+#   STATEWAVE_LITELLM_EMBEDDING_MODEL=text-embedding-3-small
+cp .env.example .env
+
 # Create virtualenv and install
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev,llm]"
@@ -117,6 +128,8 @@ The API is available at `http://localhost:8100`.
 | `http://localhost:8100/redoc` | ReDoc |
 | `GET /healthz` or `GET /health` | Liveness check |
 | `GET /readyz` or `GET /ready` | Readiness check |
+
+Check `GET /readyz` to confirm your LLM key was picked up — if `llm` shows `"not configured (skip)"`, the key isn't being read (re-check `.env` is in this directory, the one you launched `uvicorn` from).
 
 See the full [getting started guide](https://github.com/smaramwbc/statewave-docs/blob/main/getting-started.md) for step-by-step setup including environment configuration.
 
