@@ -70,7 +70,7 @@ services:
       STATEWAVE_API_URL: http://api:8100
       # Local dev placeholder — the api runs in STATEWAVE_DEBUG=true and
       # accepts any X-API-Key value. Replace with a real key in production.
-      STATEWAVE_API_KEY: dev-local-placeholder
+      STATEWAVE_API_KEY: ${STATEWAVE_API_KEY}
       NODE_ENV: production
       # Operator-console auth. The admin requires either a configured password
       # OR an explicit auth-disabled flag. We default to disabled here for the
